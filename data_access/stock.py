@@ -11,6 +11,15 @@ def save(code, name, start_date):
     stock_data.to_csv(data_dir + '/stock/' + code + '.csv', columns=['date', 'open', 'close', 'high', 'low', 'volume', 'code'], index=0)
     return stock_data
 
+
+def load(code):
+    dtype = {
+        'code': np.string_
+    }
+    # error handling??
+    df = pd.read_csv(data_dir + '/stock/' + code + '.csv', dtype=dtype)
+    return df
+
 if __name__ == '__main__':
     dtype = {
         'code': np.string_
