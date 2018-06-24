@@ -61,4 +61,6 @@ if __name__ == '__main__':
     # code = '000001'
     code = '601003'
     result = calc_probablity(code, 'down', 5, 'up')
+    json_r = {}
+    # json_r['']
     print('total: {0}, up: {1} {2}%'.format(result[1], result[2], result[0] * 100))
