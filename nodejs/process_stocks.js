@@ -13,9 +13,19 @@ async function queryByName(name) {
   console.log(zhong_stock)
 }
 
-// queryByName('中')
+async function save_stocks_with_sector() {
+  let stocks = await read_csv_to_json('../data/stock_by_sector_sw.csv');
+  stocks = stocks.map(stock => {
+    return {
+      code: stock.code,
+      name: stock.name,
+      sector: stock.c_name
+    };
+  })
+  fs.writeFileSync('../data/stocks_sector_sw.json', JSON.stringify({
+    stocks
+  }));
+}
 
-
-
-queryBySector('证券')
+save_stocks_with_sector()
 
