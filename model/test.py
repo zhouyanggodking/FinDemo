@@ -1,4 +1,4 @@
-import data_access.stock_list as stock_list
+import data_access.stock_lisst as stock_list
 import model.markov as markov
 import json
 

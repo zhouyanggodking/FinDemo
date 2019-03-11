@@ -1,0 +1,22 @@
+{
+  "name": "findemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouyanggodking/FinDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhouyanggodking/FinDemo/issues"
+  },
+  "homepage": "https://github.com/zhouyanggodking/FinDemo#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.8"
+  }
+}

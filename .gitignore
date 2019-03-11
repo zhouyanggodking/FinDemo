@@ -122,3 +122,7 @@ front_end/*.suo
 front_end/*.ntvs*
 front_end/*.njsproj
 front_end/*.sln
+
+/nodejs/node_modules
+
+/data/stock_history
