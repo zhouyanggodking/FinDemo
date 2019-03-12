@@ -1,6 +1,6 @@
 const csv = require('csvtojson');
 
-const getDataDir = () => '../data';
+const get_data_dir = () => '../data';
 
 async function read_csv_to_json(path) {
   const json = await csv().fromFile(path);
@@ -8,6 +8,6 @@ async function read_csv_to_json(path) {
 }
 
 module.exports = {
-  getDataDir,
+  get_data_dir,
   read_csv_to_json
 };

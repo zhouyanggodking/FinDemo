@@ -7,12 +7,12 @@ const app = express();
 const stockList = JSON.parse(fs.readFileSync('../data/stocks_sector_sw.json')).stocks;
 console.log(stockList)
 
-app.get('/sector_list', (req, res) => {
+app.get('/api/sector_list', (req, res) => {
   const data = fs.readFileSync('../data/sectors_sw.json');
   res.end(data)
 });
 
-app.get('/stock_list', (req, res) => {
+app.get('/api/stock_list', (req, res) => {
   // console.log(req)
   if (req.query.sector) {
     return res.json(stockList.filter(stock => stock.sector === req.query.sector));

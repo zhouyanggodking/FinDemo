@@ -106,22 +106,22 @@ venv.bak/
 data/stock/
 
 .DS_Store
-front_end/node_modules/
-front_end/dist/
-front_end/npm-debug.log*
-front_end/yarn-debug.log*
-front_end/yarn-error.log*
-front_end/test/unit/coverage/
-front_end/test/e2e/reports/
-front_end/selenium-debug.log
+frontend/node_modules/
+frontend/dist/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/test/unit/coverage/
+frontend/test/e2e/reports/
+frontend/selenium-debug.log
 
 # Editor directories and files
-front_end/.idea
-front_end/.vscode
-front_end/*.suo
-front_end/*.ntvs*
-front_end/*.njsproj
-front_end/*.sln
+frontend/.idea
+frontend/.vscode
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
 
 /nodejs/node_modules
 
