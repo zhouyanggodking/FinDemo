@@ -13,8 +13,8 @@ async function queryByName(name) {
   console.log(zhong_stock)
 }
 
-async function save_stocks_with_sector() {
-  let stocks = await read_csv_to_json('../data/stock_by_sector_sw.csv');
+async function save_stocks_with_sector(category) { // sina or sw
+  let stocks = await read_csv_to_json(`../data/stock_by_sector_${category}.csv`);
   stocks = stocks.map(stock => {
     return {
       code: stock.code,
@@ -22,10 +22,11 @@ async function save_stocks_with_sector() {
       sector: stock.c_name
     };
   })
-  fs.writeFileSync('../data/stocks_sector_sw.json', JSON.stringify({
+  fs.writeFileSync(`../data/stocks_sector_${category}.json`, JSON.stringify({
     stocks
   }));
 }
 
-save_stocks_with_sector()
+save_stocks_with_sector('sina')
+save_stocks_with_sector('sw')
 
