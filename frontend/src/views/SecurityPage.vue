@@ -29,7 +29,7 @@ export default {
       kTypes: ['minK', 'dailyK', 'weeklyK', 'monthlyK'],
       stockList: [],
       sector: 'security',
-      sectors: [{ label: '证券', val: 'security' }, { label: '白酒', val: 'alcohol' }]
+      sectors: [{ label: '证券', val: 'security' }, { label: '白酒', val: 'alcohol' }, { label: '保险', val: 'assurance' }]
     };
   },
   methods: {
