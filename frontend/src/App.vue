@@ -1,16 +1,16 @@
 <template>
   <div>
-    <navigation></navigation>  
+    <!-- <navigation></navigation>   -->
     <router-view/>
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation';
+// import Navigation from './components/Navigation';
 
 export default {
   components: {
-    Navigation
+    // Navigation
   }
 };
 </script>

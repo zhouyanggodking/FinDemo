@@ -1,11 +1,14 @@
 <template>
   <div class="container">
-    <el-select v-model="kType">
-      <el-option v-for="(item, index) in kTypes" :key="index" :value="item" :label="item"></el-option>
-    </el-select>
-    <el-select v-model="sector" @change="onSectorChange">
-      <el-option v-for="(item, index) in sectors" :key="index" :value="item" :label="item"></el-option>
-    </el-select>
+    <div class="row">
+      <el-select v-model="kType">
+        <el-option v-for="(item, index) in kTypes" :key="index" :value="item" :label="item"></el-option>
+      </el-select>
+      <el-select v-model="sector" @change="onSectorChange">
+        <el-option v-for="(item, index) in sectors" :key="index" :value="item.val" :label="item.label"></el-option>
+      </el-select>
+    </div>
+    
     <div class="row k-charts">
       <div v-for="(item, index) in stockList" :key="index" class="item">
         <div class="ticker">{{item.name}}</div>
@@ -25,8 +28,8 @@ export default {
       kType: 'dailyK',
       kTypes: ['minK', 'dailyK', 'weeklyK', 'monthlyK'],
       stockList: [],
-      sector: '证券',
-      sectors: ['证券', '饮料制造']
+      sector: 'security',
+      sectors: [{ label: '证券', val: 'security' }, { label: '白酒', val: 'alcohol' }]
     };
   },
   methods: {

@@ -15,7 +15,11 @@ app.get('/api/sector_list', (req, res) => {
 app.get('/api/stock_list', (req, res) => {
   // console.log(req)
   if (req.query.sector) {
-    return res.json(stockList.filter(stock => stock.sector === req.query.sector));
+    const list = stockList.filter(stock => stock.sector === req.query.sector);
+    fs.writeFileSync(`../data/${req.query.sector}.json`, JSON.stringify({
+      list
+    }));
+    return res.json(list);
   }
   return res.json(stockList)
 });
