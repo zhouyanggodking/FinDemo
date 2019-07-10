@@ -15,7 +15,7 @@
         <!-- <img :src="item[kType]" alt=""> -->
         <el-image
           :src="item[kType]"
-          fit="fit"></el-image>
+          fit="fit" lazy></el-image>
       </div>
     </div>    
   </div>
