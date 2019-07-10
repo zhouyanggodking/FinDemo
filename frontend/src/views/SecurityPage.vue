@@ -12,7 +12,10 @@
     <div class="row k-charts">
       <div v-for="(item, index) in stockList" :key="index" class="item">
         <div class="ticker">{{item.name}}</div>
-        <img :src="item[kType]" alt="">
+        <!-- <img :src="item[kType]" alt=""> -->
+        <el-image
+          :src="item[kType]"
+          fit="fit"></el-image>
       </div>
     </div>    
   </div>
